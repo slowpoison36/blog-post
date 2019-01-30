@@ -1,5 +1,5 @@
 /node_modules/
 .vscode
 
-mop/node_modules
-mop/src
+/mop/node_modules
+/mop/src

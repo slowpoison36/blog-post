@@ -7,7 +7,7 @@ const userRoutes = require("./routes/user");
 const postRoutes = require("./routes/post");
 const path =require("path");
 const cors = require("cors");
-app.use(express.static(path.join(__dirname,"mop","build")));
+app.use(express.static(path.join(__dirname,"public","build")));
 app.use(cors());
 app.use(bodyParser.json()); 
 app.use(bodyParser.urlencoded({extended:true}));
@@ -21,6 +21,6 @@ app.use("/api",postRoutes);
 const PORT = process.env.PORT || 7000;
 
 app.get("*",(req,res)=>{
-    res.sendFile(path.join(__dirname,"mop","build","index.html"));
+    res.sendFile(path.join(__dirname,"public","build","index.html"));
 })
 app.listen(PORT, () => console.log("Server started successfully"));

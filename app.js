@@ -18,7 +18,7 @@ mongoose.connect(dbConfig.config.connectionUrl,(err)=>{
 app.use("/api",userRoutes);
 app.use("/api",postRoutes);
 
-const PORT = process.env.PORT || 7000;
+const PORT = process.env.PORT || 3000;
 
 app.get("*",(req,res)=>{
     res.sendFile(path.join(__dirname,"public","build","index.html"));
